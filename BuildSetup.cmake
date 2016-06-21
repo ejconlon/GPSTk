@@ -8,9 +8,15 @@
 # Shared(Dynamic) vs. Static libraries
 #----------------------------------------
 if( UNIX )
-    set( STADYN "SHARED" )
+    if(DEFINED STADYN)
+    else()
+        set(STADYN "SHARED")
+    endif()
 elseif( WIN32 )
-    set( STADYN "STATIC" )
+    if(DEFINED STADYN)
+    else()
+        set(STADYN "STATIC")
+    endif()
 endif()
 
 #----------------------------------------
