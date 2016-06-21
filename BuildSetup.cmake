@@ -17,6 +17,8 @@ elseif( WIN32 )
     else()
         set(STADYN "STATIC")
     endif()
+else()
+    set(STADYN "SHARED")
 endif()
 
 #----------------------------------------
